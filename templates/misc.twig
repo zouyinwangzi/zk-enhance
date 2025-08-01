@@ -1,0 +1,55 @@
+<div class="layui-collapse" lay-accordion>
+
+    <div class="layui-colla-item">
+        <h2 class="layui-colla-title">图像管理</h2>
+
+        <div class="layui-colla-content">
+            <h3>生成图像尺寸管理</h3>
+            <div class="layui-form-item">
+                <label class="layui-form-label">禁止生成图像尺寸</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" name="zkcc_disable_builtin_size" value="1" lay-skin="switch" class="layui-checkbox-handle"
+                        lay-text="ON|OFF" {% if options.zkcc_disable_builtin_size=='1' %}checked{% endif %}>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">全选/全不选</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" name="image_size_select_all" lay-filter="image_size_select_all" value="1"
+                        lay-skin="switch" lay-text="Select All|Select None">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">禁用以下图像尺寸</label>
+                <div class="layui-input-block disable_image_size">
+                    {% for name, size in new_sizes %}
+                    <input type="checkbox" name="zkcc_disable_image_size[]" lay-skin="primary"
+                        title="{{ name ~ ': ' ~ size.width ~ ' * ' ~ size.height }}" value="{{ name }}" {% if name in
+                        options.zkcc_disable_image_size %}checked{% endif %} />
+                    {% endfor %}
+
+                </div>
+            </div>
+
+
+
+
+            <hr class="layui-bg-blue">
+
+            <h3>支持webp格式图片</h3>
+            <div class="layui-form-item">
+                <label class="layui-form-label">开启支持</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" name="zkcc_enable_webp" value="1" lay-skin="switch" lay-text="ON|OFF" {% if
+                        options.zkcc_enable_webp=='1' %}checked{% endif %}>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+</div>
