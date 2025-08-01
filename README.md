@@ -2,7 +2,7 @@
 
 ## 插件简介
 
-**Zendkee Enhance** 是一个为 WordPress 提供增强功能的插件，依赖于 [ZKCC Framework](../zkcc-framework) 插件作为底层后台管理和数据处理框架。
+**Zendkee Enhance** 是一个为 WordPress 提供增强功能的插件，依赖于 [ZKCC Framework](https://github.com/zouyinwangzi/zkcc-framework) 插件作为底层后台管理和数据处理框架。
 主要通过这个插件讲解它如何利用zkcc-framework框架进行插件开发。
 
 
